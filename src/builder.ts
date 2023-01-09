@@ -21,3 +21,10 @@ export const builder = new SchemaBuilder<{
 });
 
 builder.addScalarType("Date", DateResolver, {});
+
+//initialize builder query type to access te objects defined in models folder
+//this registers a special graphQL type that holds the definitions for each of 
+//the queries and acts as the entry point to your GraphQL API.
+//You define this type in this file to ensure that the query buider has a query type
+//defined. That way, you can add query fields to it later on
+builder.queryType({})
